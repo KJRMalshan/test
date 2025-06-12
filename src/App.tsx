@@ -12,6 +12,7 @@ import JobDetails from './pages/JobDetails';
 import PostJob from './pages/postjob';
 import { AuthProvider } from './context/AuthContext';
 import { useAuth } from './context/AuthContext';
+import ApplyForm from './components/jobs/ApplyForm';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user, loading } = useAuth();
@@ -72,6 +73,11 @@ const AppRoutes: React.FC = () => {
             <Dashboard />
           </Layout>
         </ProtectedRoute>
+      } />
+      <Route path="/apply" element={
+        <Layout>
+          <ApplyForm />
+        </Layout>
       } />
     </Routes>
   );
