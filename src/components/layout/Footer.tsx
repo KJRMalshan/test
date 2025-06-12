@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
-                <Link to="/about" className="text-base text-gray-500 hover:text-gray-900">
+                <Link to="/About" className="text-base text-gray-500 hover:text-gray-900">
                   About Us
                 </Link>
               </li>

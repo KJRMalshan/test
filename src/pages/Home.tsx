@@ -75,9 +75,11 @@ const Home: React.FC = () => {
                     className="w-full pl-10 pr-4 py-3 text-gray-900 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
+                <Link to="/jobs">
                 <Button variant="primary" size="lg" className="px-8">
                   Search Jobs
                 </Button>
+                </Link>
               </div>
             </div>
           </div>

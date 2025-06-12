@@ -22,7 +22,7 @@ const PostJob: React.FC = () => {
     type: 'part-time',
     salaryMin: '',
     salaryMax: '',
-    currency: '$',
+    currency: 'Rs.',
     description: '',
     requirements: [''],
     responsibilities: [''],
@@ -181,7 +181,7 @@ const PostJob: React.FC = () => {
                     label="Company Name *"
                     value={formData.company}
                     onChange={(e) => handleInputChange('company', e.target.value)}
-                    placeholder="e.g. TechCorp Inc."
+                    placeholder="e.g. ITUM."
                     required
                   />
                 </div>
@@ -191,7 +191,7 @@ const PostJob: React.FC = () => {
                     label="Location *"
                     value={formData.location}
                     onChange={(e) => handleInputChange('location', e.target.value)}
-                    placeholder="e.g. Remote, New York, NY"
+                    placeholder="e.g. Remote, Colombo, Sri Lanka"
                     required
                   />
                   
@@ -219,9 +219,10 @@ const PostJob: React.FC = () => {
                   <Select
                     label="Currency"
                     options={[
+                      { value: 'Rs', label: 'SLR (Rs)' },
                       { value: '$', label: 'USD ($)' },
-                      { value: '€', label: 'EUR (€)' },
-                      { value: '£', label: 'GBP (£)' }
+                      { value: '€', label: 'Euro (€)' },
+                      
                     ]}
                     value={formData.currency}
                     onChange={(value) => handleInputChange('currency', value)}

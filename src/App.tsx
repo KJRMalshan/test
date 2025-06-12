@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import Home from './pages/Home';
+import Contact from './pages/Contact';
+import About from './pages/About';
 import Jobs from './pages/Jobs';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
@@ -45,7 +47,19 @@ const AppRoutes: React.FC = () => {
           <JobDetails />
         </Layout>
       } />
-      <Route path="/post-job" element={
+      
+      <Route path="/contact" element={
+        <Layout>
+          <Contact />
+        </Layout>
+      } />
+      <Route path="/About" element={
+        <Layout>
+          <About />
+        </Layout>
+      } />
+      
+        <Route path="/post-job" element={
         <ProtectedRoute>
           <Layout>
             <PostJob />
