@@ -56,7 +56,10 @@ This is a part-time position perfect for someone looking to balance work with ot
   };
 
   const handleApply = () => {
-    alert('Application submitted! (This is a demo)');
+    const applyWindow = window.open('/apply', '_blank', 'width=500,height=600');
+    if (!applyWindow) {
+    alert('Popup blocked! Please allow popups for this site.');
+  }
   };
 
   return (
